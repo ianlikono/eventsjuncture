@@ -1,10 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ThemeProvider } from "styled-components";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const theme = {
+  colorPrimaryDark: "#181818",
+  colorPrimaryLight: "#333333",
+  textColorLight: "#FFFFFF",
+  textColorDark: "#AAAAAA",
+  paragraphColor: "#888888",
+  BorderColor: "#707070",
+  colorPurpleDark: "#2069BC",
+  colorPurpleMedium: "#588EDD",
+  colorPurpleLight: "#C5C4FF"
+};
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
