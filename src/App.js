@@ -1,26 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    :before,
+    :after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: ${props => props.theme.colorPrimaryDark};
+  }
+  body {
+    font-family: $font-primary;
+    font-weight: 300;
+    line-height: 1.6;
+    color: ${props => props.theme.textColorLight}
+  }
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <GlobalStyle />
+        <h1>Awesome</h1>
+      </React.Fragment>
     );
   }
 }
