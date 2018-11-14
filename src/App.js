@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { createGlobalStyle } from "styled-components";
+import Card from "./components/shared/Card/Card";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.colorPrimaryDark};
   }
   body {
-    font-family: $font-primary;
+    font-family: ${props => props.theme.fontPrimary};
     font-weight: 300;
     line-height: 1.6;
     color: ${props => props.theme.textColorLight}
@@ -30,7 +31,21 @@ class App extends Component {
     return (
       <React.Fragment>
         <GlobalStyle />
-        <h1>Awesome</h1>
+        <div>Awesome</div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))"
+          }}
+        >
+          <Card tagColor="red" fullWidth={true} />
+          <Card tagColor="blue" fullWidth={true} />
+          <Card tagColor="purple" fullWidth={true} />
+          <Card tagColor="orange" fullWidth={true} />
+          <Card tagColor="black" fullWidth={true} />
+          <Card tagColor="green" fullWidth={true} />
+          <Card tagColor="yellow" fullWidth={true} />
+        </div>
       </React.Fragment>
     );
   }
