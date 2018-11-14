@@ -11,6 +11,7 @@ import * as serviceWorker from "./serviceWorker";
   textColorDark: "#AAAAAA",
   paragraphColor: "#888888",
   BorderColor: "#707070",
+
   colorBlueDark: "#2069BC",
   coloBlueMedium: "#588EDD",
   colorBlueLight: "#C5C4FF",
@@ -23,6 +24,17 @@ import * as serviceWorker from "./serviceWorker";
   colorAquaLight: "#26C8E5",
   colorAquaVeryLight: "#22e2c9"
   
+
+
+  colorPurpleDark: "#2069BC",
+  colorPurpleMedium: "#588EDD",
+  colorPurpleLight: "#C5C4FF",
+  fontPrimary: "'Nunito', sans-serif",
+  fontDisplay: "'Josefin Sans', sans-serif",
+  HoverBoxShadow:
+    "5px 6px 8px 5px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+  BoxShadow:
+    "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)"
 
 };
 
