@@ -4,13 +4,28 @@ import { ThemeProvider } from "styled-components";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const theme = {
+ const theme = {
   colorPrimaryDark: "#181818",
   colorPrimaryLight: "#333333",
   textColorLight: "#FFFFFF",
   textColorDark: "#AAAAAA",
   paragraphColor: "#888888",
   BorderColor: "#707070",
+
+  colorBlueDark: "#2069BC",
+  coloBlueMedium: "#588EDD",
+  colorBlueLight: "#C5C4FF",
+
+  colorPurpleDark: "#5F26FA",
+  colorPurpleLight: "#B04AEA",
+
+  colorAquaDark: "#1B7BDD",
+  colorAquaMild: "#1EA6E5",
+  colorAquaLight: "#26C8E5",
+  colorAquaVeryLight: "#22e2c9"
+  
+
+
   colorPurpleDark: "#2069BC",
   colorPurpleMedium: "#588EDD",
   colorPurpleLight: "#C5C4FF",
@@ -20,6 +35,7 @@ const theme = {
     "5px 6px 8px 5px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
   BoxShadow:
     "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)"
+
 };
 
 ReactDOM.render(

@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { createGlobalStyle } from "styled-components";
+
+import { Button } from './components/shared/Button/Button'
+
 import Card from "./components/shared/Card/Card";
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -31,6 +35,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <GlobalStyle />
+
+        <h1>Awesome</h1>
+        <Button small aqua>TRAVEL</Button>
+
         <div>Awesome</div>
         <div
           style={{
@@ -46,6 +54,7 @@ class App extends Component {
           <Card tagColor="green" fullWidth={true} />
           <Card tagColor="yellow" fullWidth={true} />
         </div>
+
       </React.Fragment>
     );
   }
