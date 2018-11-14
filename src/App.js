@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { createGlobalStyle } from "styled-components";
+import { Button } from './components/shared/Button/Button'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -31,6 +32,7 @@ class App extends Component {
       <React.Fragment>
         <GlobalStyle />
         <h1>Awesome</h1>
+        <Button small aqua>TRAVEL</Button>
       </React.Fragment>
     );
   }
