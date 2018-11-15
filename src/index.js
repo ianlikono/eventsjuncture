@@ -12,6 +12,8 @@ import * as serviceWorker from "./serviceWorker";
   paragraphColor: "#888888",
   BorderColor: "#707070",
 
+  inputBorderColor: "#c6c6c6",
+
   colorBlueDark: "#2069BC",
   colorBlueMedium: "#588EDD",
   colorBlueLight: "#C5C4FF",

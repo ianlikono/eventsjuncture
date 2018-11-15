@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components';
 export const InputField = styled.input`
   border: none;
   background: none;
-  border-bottom: 1px solid #c6c6c6;
+  border-bottom: ${(props)=>`1px solid ${props.theme.inputBorderColor}`};
   color: white;
   display: block;
-  padding: 10px 10px 10px 5px;
+  padding: 1rem 1rem 1rem 0.5rem;
   font-size: 1.4rem;
   
 
