@@ -3,17 +3,21 @@ import styled, { css } from 'styled-components';
 export const Button = styled.button`
 
  padding: 1.5rem 5rem;
- background-image: ${(props)=>`linear-gradient(to right,${props.theme.colorBlueDark},${props.theme.coloBlueMedium},${props.theme.colorBlueLight})`};
+ background-image: ${(props)=>`linear-gradient(to right,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
  border: none;
- font-family: Montserrat;
+ font-family: josefin,Nunito;
  color: white;
  text-decoration: none;
  font-size: 1rem;
  cursor: pointer;
  letter-spacing: 0.08rem;
- box-shadow: 0 8rem 16rem 0 rgba(0,0,0,0.2), 0 6rem 20rem 0 rgba(0,0,0,0.19);
+ box-shadow: ${props=>props.theme.BoxShadow}
  font-weight:700;
 
+  &:hover{
+  background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
+  box-shadow: ${props=>props.theme.HoverBoxShadow}
+  }
 
  ${props=>props.small && css`
     padding: 1.5rem 4rem;
@@ -21,6 +25,11 @@ export const Button = styled.button`
 
   ${props=>props.purple && css`
     background-image: ${(props)=>`linear-gradient(to bottom right,${props.theme.colorPurpleLight},${props.theme.colorPurpleDark})`};
+  
+    &:hover{
+  background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorPurpleLight},${props.theme.colorPurpleDark}`};
+ }
+  
   `};
 
   ${props=>props.large && css`
@@ -43,13 +52,16 @@ export const Button = styled.button`
 
  `}
 
+
+ 
+
  ${props=>props.aqua && css`
     background-image: ${(props)=>`linear-gradient(to bottom right,${props.theme.colorAquaDark},${props.theme.colorAquaMild},${props.theme.colorAquaLight},${props.theme.colorAquaVeryLight})`};
+ &:hover{
+  background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorAquaDark},${props.theme.colorAquaMild},${props.theme.colorAquaLight})`};
+ }
   `};
 
- &:hover{
-  background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorPurpleDark},${props.theme.colorPurpleMedium},${props.theme.colorPurpleLight})`};
- }
 
  &:active{
     transform: translateY(0.1rem);
