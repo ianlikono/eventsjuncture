@@ -12,8 +12,10 @@ import * as serviceWorker from "./serviceWorker";
   paragraphColor: "#888888",
   BorderColor: "#707070",
 
+  inputBorderColor: "#c6c6c6",
+
   colorBlueDark: "#2069BC",
-  coloBlueMedium: "#588EDD",
+  colorBlueMedium: "#588EDD",
   colorBlueLight: "#C5C4FF",
 
   colorPurpleDark: "#5F26FA",
@@ -22,13 +24,10 @@ import * as serviceWorker from "./serviceWorker";
   colorAquaDark: "#1B7BDD",
   colorAquaMild: "#1EA6E5",
   colorAquaLight: "#26C8E5",
-  colorAquaVeryLight: "#22e2c9"
-  
-
-
-  colorPurpleDark: "#2069BC",
+  colorAquaVeryLight: "#22e2c9",
+ 
   colorPurpleMedium: "#588EDD",
-  colorPurpleLight: "#C5C4FF",
+
   fontPrimary: "'Nunito', sans-serif",
   fontDisplay: "'Josefin Sans', sans-serif",
   HoverBoxShadow:

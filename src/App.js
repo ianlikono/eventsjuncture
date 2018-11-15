@@ -5,6 +5,7 @@ import { Button } from './components/shared/Button/Button'
 
 import Card from "./components/shared/Card/Card";
 
+import Input from './components/shared/Input/Input';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -37,7 +38,20 @@ class App extends Component {
         <GlobalStyle />
 
         <h1>Awesome</h1>
-        <Button small aqua>TRAVEL</Button>
+       
+        <Input
+          name="Name"
+          type="text"
+          
+        />
+        <div style={{margin: '10px'}}/>
+        <Input 
+          name="Password"
+          type='password'
+         
+        />
+
+        <Button>TRAVEL</Button>
 
         <div>Awesome</div>
         <div
