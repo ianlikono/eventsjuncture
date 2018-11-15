@@ -14,14 +14,6 @@ export const InputField = styled.input`
     outline: none;
   }
 
-  &:valid ~ &{
-    left: 0.6rem;
-    top: 0.01rem;
-    opacity: 1.6;
-    font-size: 0.9rem;
-  }
-
-
 `
 
 export const Label = styled.label`
@@ -37,9 +29,16 @@ export const Label = styled.label`
     top: 0.01rem;
     opacity: 1.6;
     font-size: 0.9rem;
+ }
    
+    ${InputField}:valid ~ & {
+    left: 0.6rem;
+    top: 0.01rem;
+    opacity: 1.6;
+    font-size: 0.9rem;
+  }
    
-}
+`
 
   /* ${InputField}:valid ~ &{
     left: 0.6rem;
@@ -47,7 +46,7 @@ export const Label = styled.label`
     opacity: 1.6;
     font-size: 0.9rem;
   } */
-  `
+  
 
 export const InputWrapper = styled.div`
 position: relative;

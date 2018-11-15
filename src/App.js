@@ -41,11 +41,14 @@ class App extends Component {
        
         <Input
           name="Name"
+          type="text"
+          
         />
         <div style={{margin: '10px'}}/>
         <Input 
           name="Password"
           type='password'
+         
         />
 
         <Button>TRAVEL</Button>

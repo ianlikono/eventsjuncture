@@ -2,12 +2,12 @@ import React from 'react';
 import { InputField, Label, InputWrapper } from './InputField';
 
 const Input = (props) =>{
-  const { type, name } = props;
+  const { type, name, required } = props;
   return(
     <React.Fragment>
     <InputWrapper>
     
-    <InputField type={type}/> 
+    <InputField required type={type}/> 
     <Label>{name}</Label>
    
     </InputWrapper>
