@@ -2,7 +2,6 @@ import { lighten } from "polished";
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-  margin: 50px;
   display: grid;
   grid-template-rows: 4fr 2fr 5fr 1fr;
   grid-template-columns: repeat(2, 1fr);
@@ -29,12 +28,7 @@ export const DateInfo = styled.div`
   grid-row: 2 / 3;
   display: flex;
   position: relative;
-  ${({ fullwidth }) =>
-    fullwidth
-      ? `
-    grid-column: 1 / -1;
-  `
-      : "grid-column: 1 / 2"}
+  grid-column: 1 / -1;
 `;
 
 export const DateIcon = styled.div`
@@ -54,6 +48,10 @@ export const DateMonth = styled.h1`
   color: ${props => props.theme.textColorLight};
   font-size: 1.5rem;
   align-self: center;
+  display: block;
+  &:first-letter {
+    text-transform: uppercase;
+  }
 `;
 
 export const PureDateWrapper = styled.div`
@@ -81,6 +79,13 @@ export const Plus = styled.div`
   position: absolute;
   right: 1rem;
   align-self: center;
+
+  &:hover {
+    box-shadow: ${props => props.theme.HoverBoxShadow};
+  }
+  &:active {
+    box-shadow: ${props => props.theme.BoxShadow};
+  }
 `;
 
 export const CardContent = styled.div`
@@ -109,6 +114,7 @@ export const CardFooter = styled.div`
 
 export const Tag = styled.div`
   margin-right: 1rem;
+  box-shadow: ${props => props.theme.BoxShadow};
   display: flex;
   ${({ color }) => {
     const lightColor = lighten(0.2, color);
