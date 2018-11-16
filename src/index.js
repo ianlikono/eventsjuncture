@@ -11,7 +11,7 @@ const theme = {
   textColorDark: "#AAAAAA",
   paragraphColor: "#888888",
   BorderColor: "#707070",
-  colorPurpleDark: "#2069BC",
+  colorPurpleDark: "#2573CB",
   colorPurpleMedium: "#588EDD",
   colorPurpleLight: "#C5C4FF",
   fontPrimary: "'Nunito', sans-serif",
@@ -19,7 +19,9 @@ const theme = {
   HoverBoxShadow:
     "5px 6px 8px 5px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
   BoxShadow:
-    "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)"
+    "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+  imageGradientLight: "rgba(197 ,196 ,255, 0.8)",
+  imageGradientDark: "rgba(37, 115, 203, 0.8)"
 };
 
 ReactDOM.render(

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import Card from "./components/shared/Card/Card";
+import NavBar from "./components/NavBar/NavBar";
+import routes from "./routes";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,24 +31,13 @@ const GlobalStyle = createGlobalStyle`
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <GlobalStyle />
-        <div>Awesome</div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))"
-          }}
-        >
-          <Card tagColor="red" fullWidth={true} />
-          <Card tagColor="blue" fullWidth={true} />
-          <Card tagColor="purple" fullWidth={true} />
-          <Card tagColor="orange" fullWidth={true} />
-          <Card tagColor="black" fullWidth={true} />
-          <Card tagColor="green" fullWidth={true} />
-          <Card tagColor="yellow" fullWidth={true} />
-        </div>
-      </React.Fragment>
+      <BrowserRouter>
+        <React.Fragment>
+          <GlobalStyle />
+          <NavBar />
+          {routes}
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
