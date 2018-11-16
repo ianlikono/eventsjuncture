@@ -11,9 +11,23 @@ const theme = {
   textColorDark: "#AAAAAA",
   paragraphColor: "#888888",
   BorderColor: "#707070",
-  colorPurpleDark: "#2573CB",
+
+  inputBorderColor: "#c6c6c6",
+
+  colorBlueDark: "#2069BC",
+  colorBlueMedium: "#588EDD",
+  colorBlueLight: "#C5C4FF",
+
+  colorPurpleDark: "#5F26FA",
+  colorPurpleLight: "#B04AEA",
+
+  colorAquaDark: "#1B7BDD",
+  colorAquaMild: "#1EA6E5",
+  colorAquaLight: "#26C8E5",
+  colorAquaVeryLight: "#22e2c9",
+
   colorPurpleMedium: "#588EDD",
-  colorPurpleLight: "#C5C4FF",
+
   fontPrimary: "'Nunito', sans-serif",
   fontDisplay: "'Josefin Sans', sans-serif",
   HoverBoxShadow:
