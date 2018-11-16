@@ -1,27 +1,22 @@
 import styled, { css } from "styled-components";
 
 export const Button = styled.button`
-  padding: 1.5rem 5rem;
-  background-image: ${props =>
-    `linear-gradient(to right,${props.theme.colorBlueDark},${
-      props.theme.colorBlueMedium
-    },${props.theme.colorBlueLight})`};
-  border: none;
-  font-family: josefin, Nunito;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  cursor: pointer;
-  letter-spacing: 0.08rem;
-  box-shadow: ${props => props.theme.BoxShadow};
-  font-weight: 700;
 
-  &:hover {
-    background-image: ${props =>
-      `linear-gradient(to left,${props.theme.colorBlueDark},${
-        props.theme.colorBlueMedium
-      },${props.theme.colorBlueLight})`};
-    box-shadow: ${props => props.theme.HoverBoxShadow};
+ padding: 1.5rem 5rem;
+ background-image: ${(props)=>`linear-gradient(to right,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
+ border: none;
+ font-family: ${props=>props.theme.fontPrimary};
+ color: white;
+ text-decoration: none;
+ font-size: 1rem;
+ cursor: pointer;
+ letter-spacing: 0.08rem;
+ box-shadow: ${props=>props.theme.BoxShadow};
+ font-weight:700;
+
+  &:hover{
+  background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
+  box-shadow: ${props=>props.theme.HoverBoxShadow};
   }
 
   ${props =>
