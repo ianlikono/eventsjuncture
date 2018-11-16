@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
- const theme = {
+const theme = {
   colorPrimaryDark: "#181818",
   colorPrimaryLight: "#333333",
   textColorLight: "#FFFFFF",
@@ -25,7 +25,7 @@ import * as serviceWorker from "./serviceWorker";
   colorAquaMild: "#1EA6E5",
   colorAquaLight: "#26C8E5",
   colorAquaVeryLight: "#22e2c9",
- 
+
   colorPurpleMedium: "#588EDD",
 
   fontPrimary: "'Nunito', sans-serif",
@@ -33,8 +33,9 @@ import * as serviceWorker from "./serviceWorker";
   HoverBoxShadow:
     "5px 6px 8px 5px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
   BoxShadow:
-    "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)"
-
+    "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
+  imageGradientLight: "rgba(197 ,196 ,255, 0.8)",
+  imageGradientDark: "rgba(37, 115, 203, 0.8)"
 };
 
 ReactDOM.render(
