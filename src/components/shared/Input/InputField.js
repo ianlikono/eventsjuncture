@@ -1,10 +1,10 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const InputField = styled.input`
   border: none;
   background: none;
   border-bottom: ${(props)=>`1px solid ${props.theme.inputBorderColor}`};
-  color: white;
+  color: ${props=>props.theme.textColorLight};
   display: block;
   padding: 1rem 1rem 1rem 0.5rem;
   font-size: 1.4rem;
@@ -40,12 +40,6 @@ export const Label = styled.label`
    
 `
 
-  /* ${InputField}:valid ~ &{
-    left: 0.6rem;
-    top: 0.01rem;
-    opacity: 1.6;
-    font-size: 0.9rem;
-  } */
   
 
 export const InputWrapper = styled.div`

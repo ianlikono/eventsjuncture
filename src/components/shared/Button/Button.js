@@ -5,7 +5,7 @@ export const Button = styled.button`
  padding: 1.5rem 5rem;
  background-image: ${(props)=>`linear-gradient(to right,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
  border: none;
- font-family: josefin,Nunito;
+ font-family: ${props=>props.theme.fontPrimary};
  color: white;
  text-decoration: none;
  font-size: 1rem;
