@@ -12,6 +12,8 @@ const theme = {
   paragraphColor: "#888888",
   BorderColor: "#707070",
 
+  fontSize:  '0.7rem',
+
   inputBorderColor: "#c6c6c6",
 
   colorBlueDark: "#2069BC",
