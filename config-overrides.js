@@ -27,7 +27,10 @@ module.exports = function override(config, env) {
       "background-color-base": "#282828",
       "table-selected-row-bg": "#B04AEA",
       "table-expanded-row-bg": "#B04AEA",
-      "tree-directory-selected-color": "#B04AEA"
+      "tree-directory-selected-color": "#B04AEA",
+      "font-size-base ": "inherit",
+      "font-size-lg ": "inherit",
+      "font-size-sm": "inherit",
     },
     javascriptEnabled: true
   })(config, env);
