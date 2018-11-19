@@ -6,6 +6,7 @@
     "antd": "^3.10.7",
     "babel-plugin-import": "^1.11.0",
     "moment": "^2.22.2",
+    "nuka-carousel": "^4.4.3",
     "polished": "^2.3.0",
     "react": "^16.6.3",
     "react-app-rewire-less": "^2.1.3",
