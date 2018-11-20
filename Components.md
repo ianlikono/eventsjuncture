@@ -30,3 +30,39 @@ const dayTime1 = "wed, 9:30PM";
         tag="Music"
 />
 ```
+### Button Component
+```
+To determine the size of the button component, you can pass the prop; big, small or tiny.
+
+To make the button round, pass the prop round.
+
+The button component accepts the prop purple and aqua to determine it's color. The default color is blue.
+
+if you wanted a blue big button, you will pass prop shown below
+<Button 
+blue
+big
+/>
+
+Button also accepts font-size and width prop.
+<Button
+fontSize="12rem"
+width="12rem"
+/>
+```
+
+### Input Component
+```
+the input component takes props; name and type.
+Name refers to the name of the input and the type is either text or password.
+
+<Input
+name="Name:"
+type="Text"
+/> 
+
+<Input
+name="Password:"
+type="password"
+/> 
+```

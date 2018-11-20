@@ -16,6 +16,7 @@ export const Button = styled.button`
  box-shadow: ${props=>props.theme.BoxShadow};
  font-weight:700;
  
+ font-size:${props=>props.theme.fontSize};
 
   &:hover{
   background-image: ${(props)=>`linear-gradient(to left,${props.theme.colorBlueDark},${props.theme.colorBlueMedium},${props.theme.colorBlueLight})`};
@@ -54,7 +55,7 @@ export const Button = styled.button`
     props.tiny &&
     css`
       padding: 0.5rem 1rem;
-      font-size: 0.7rem;
+      
     `};
 
   ${props =>
