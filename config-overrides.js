@@ -30,7 +30,7 @@ module.exports = function override(config, env) {
       "tree-directory-selected-color": "#B04AEA",
       "font-size-base ": "inherit",
       "font-size-lg ": "inherit",
-      "font-size-sm": "inherit",
+      "font-size-sm": "inherit"
     },
     javascriptEnabled: true
   })(config, env);

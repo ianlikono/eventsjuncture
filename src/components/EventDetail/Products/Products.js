@@ -1,8 +1,10 @@
 import React from "react";
+import ProductCard from "./ProductCard";
 import { Wrapper } from "./ProductsStyles";
 
 export default () => (
   <Wrapper>
-    <h3>Products</h3>
+    <ProductCard />
+    <ProductCard />
   </Wrapper>
 );
