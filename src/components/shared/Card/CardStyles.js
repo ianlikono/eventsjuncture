@@ -124,10 +124,12 @@ export const Tag = styled.div`
     );`
     );
   }}
-  width: 7rem;
+  display: inline-block;
   font-weight: 600;
   font-size: 1.4rem;
   justify-content: center;
+  white-space: nowrap;
+  padding-right: 1rem;
 `;
 
 export const Going = styled.span`
@@ -152,16 +154,19 @@ export const Watching = styled.div`
   color: ${props => props.theme.textColorDark};
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Likes = styled.div`
   color: ${props => props.theme.textColorDark};
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Comments = styled.div`
   color: ${props => props.theme.textColorDark};
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
