@@ -43,6 +43,12 @@ if you wanted a blue big button, you will pass prop shown below
 blue
 big
 />
+
+Button also accepts font-size and width prop.
+<Button
+fontSize="12rem"
+width="12rem"
+/>
 ```
 
 ### Input Component
