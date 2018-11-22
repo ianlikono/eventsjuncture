@@ -1,5 +1,7 @@
 import React from 'react';
 import Input from '../../shared/Input/Input'
+import {Button} from '../../shared/Button/Button'
+
 
 
 const Login = () =>{
@@ -14,6 +16,7 @@ const Login = () =>{
       name="Password:"
       type="password"
     /> 
+    <Button>Log In</Button>
     </React.Fragment>
   )
 }

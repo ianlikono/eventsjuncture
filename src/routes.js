@@ -7,6 +7,6 @@ export default (
   <Switch>
     <Route path="/" exact component={Home} />
     <Route path="/event/:id" exact component={EventDetail} />
-    <Route path="/auth" exact component={Auth} />
+    <Route path="/auth"  component={Auth} />
   </Switch>
 );

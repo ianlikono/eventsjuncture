@@ -13,6 +13,7 @@ const theme = {
   BorderColor: "#707070",
 
   fontSize:  '0.7rem',
+  labelSize: '2rem',
 
   inputBorderColor: "#c6c6c6",
 
