@@ -9,6 +9,7 @@ export const AuthWrapper = styled.div`
  display: flex;
 `
 
+
 export const PictureWrapper = styled.div`
   height: 100%;
   width: 50%;
@@ -28,16 +29,18 @@ export const Label = styled.label`
 `
 
 export const ContentWrapper = styled.div`
-  margin: 0 auto;
+  height: 100%;
   border-style: dotted;
   border-color: red;
   
+`
 
+export const FormWrapper = styled.div`
 `
 
 export const DisplayWrapper = styled.div`
-  height: 80%;
-  margin: 0 auto;
+  height: 100%;
+  margin: auto auto;
   width: 50%;
 
 ` 

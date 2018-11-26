@@ -45,7 +45,10 @@ big
 />
 
 Button also accepts font-size and width prop.
+
+You can pass an onClick method like so
 <Button
+onClick={}
 fontSize="12rem"
 width="12rem"
 />
@@ -56,7 +59,10 @@ width="12rem"
 the input component takes props; name and type.
 Name refers to the name of the input and the type is either text or password.
 
+this also accepts a handle change prop
+
 <Input
+handleChange={}
 name="Name:"
 type="Text"
 /> 

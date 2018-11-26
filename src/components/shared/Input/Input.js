@@ -7,7 +7,7 @@ const Input = (props) =>{
     <React.Fragment>
     <InputWrapper>
     
-    <InputField required type={type}/> 
+    <InputField onChange={props.handleChange} required type={type}/> 
     <Label>{name}</Label>
    
     </InputWrapper>
