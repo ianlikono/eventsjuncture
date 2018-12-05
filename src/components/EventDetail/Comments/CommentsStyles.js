@@ -48,6 +48,7 @@ export const UserAvatar = styled.img`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  object-fit: cover;
 `;
 
 export const CommentDetails = styled.span`

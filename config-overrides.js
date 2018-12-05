@@ -17,7 +17,6 @@ module.exports = function override(config, env) {
       "input-bg": "#333333",
       "component-background": "#333333",
       "heading-color": "fade(#fff, 85%)",
-      "text-color": "fade(#fff, 65%)",
       "text-color-secondary": "fade(#fff, 45%)",
       "heading-color-dark": "fade(#fff, 100%)",
       "text-color-dark": "fade(#fff, 85%)",
@@ -27,10 +26,7 @@ module.exports = function override(config, env) {
       "background-color-base": "#282828",
       "table-selected-row-bg": "#B04AEA",
       "table-expanded-row-bg": "#B04AEA",
-      "tree-directory-selected-color": "#B04AEA",
-      "font-size-base ": "inherit",
-      "font-size-lg ": "inherit",
-      "font-size-sm": "inherit"
+      "tree-directory-selected-color": "#B04AEA"
     },
     javascriptEnabled: true
   })(config, env);

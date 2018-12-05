@@ -1,0 +1,144 @@
+type Event {
+  id: ID!
+  title: String!
+  description: String!
+  address: String!
+  latitude: Float!
+  longitude: Float!
+  startDate: String!
+  endDate: String!
+  coverUrl: String!
+  largeCoverUrl: String!
+  tag: String!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelEventConnection {
+  items: [Event]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelEventFilterInput {
+  id: ModelIDFilterInput
+  title: ModelStringFilterInput
+  description: ModelStringFilterInput
+  address: ModelStringFilterInput
+  latitude: ModelFloatFilterInput
+  longitude: ModelFloatFilterInput
+  startDate: ModelStringFilterInput
+  endDate: ModelStringFilterInput
+  coverUrl: ModelStringFilterInput
+  largeCoverUrl: ModelStringFilterInput
+  tag: ModelStringFilterInput
+  and: [ModelEventFilterInput]
+  or: [ModelEventFilterInput]
+  not: ModelEventFilterInput
+}
+
+type Query {
+  getEvent(id: ID!): Event
+  listEvents(filter: ModelEventFilterInput, limit: Int, nextToken: String): ModelEventConnection
+}
+
+input CreateEventInput {
+  id: ID
+  title: String!
+  description: String!
+  address: String!
+  latitude: Float!
+  longitude: Float!
+  startDate: String!
+  endDate: String!
+  coverUrl: String!
+  largeCoverUrl: String!
+  tag: String!
+}
+
+input UpdateEventInput {
+  id: ID!
+  title: String
+  description: String
+  address: String
+  latitude: Float
+  longitude: Float
+  startDate: String
+  endDate: String
+  coverUrl: String
+  largeCoverUrl: String
+  tag: String
+}
+
+input DeleteEventInput {
+  id: ID
+}
+
+type Mutation {
+  createEvent(input: CreateEventInput!): Event
+  updateEvent(input: UpdateEventInput!): Event
+  deleteEvent(input: DeleteEventInput!): Event
+}
+
+type Subscription {
+  onCreateEvent: Event @aws_subscribe(mutations: ["createEvent"])
+  onUpdateEvent: Event @aws_subscribe(mutations: ["updateEvent"])
+  onDeleteEvent: Event @aws_subscribe(mutations: ["deleteEvent"])
+}

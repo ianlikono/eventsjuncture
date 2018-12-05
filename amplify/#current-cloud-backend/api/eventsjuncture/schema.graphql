@@ -1,0 +1,13 @@
+type Event @model {
+  id: ID!
+  title: String!
+  description: String!
+  address: String!
+  latitude: Float!
+  longitude: Float!
+  startDate: String!
+  endDate: String!
+  coverUrl: String!
+  largeCoverUrl: String!
+  tag: String!
+}
