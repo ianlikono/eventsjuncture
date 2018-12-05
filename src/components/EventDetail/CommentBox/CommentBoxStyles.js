@@ -35,7 +35,7 @@ export const UserImg = styled.img`
   animation: ${turnpic} 1s infinite alternate;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
 `;
 
 export const CommentBox = styled.div`

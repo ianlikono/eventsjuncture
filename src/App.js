@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5% !important;
     background-color: ${props => props.theme.colorPrimaryDark};
   }
   body {

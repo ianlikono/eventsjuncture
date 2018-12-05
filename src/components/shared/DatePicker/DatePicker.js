@@ -42,16 +42,12 @@ function disabledRangeTime(_, type) {
   };
 }
 
-function onChange(date, dateString) {
-  console.log(date, dateString);
-}
-
 const DateComponent = props => {
   if (!props.isMobile) {
     return (
-      <div style={{ marginLeft: "40vw", marginTop: "70px" }}>
+      <React.Fragment>
         <RangePicker
-          onChange={onChange}
+          onChange={props.onChange}
           disabledDate={disabledDate}
           disabledTime={disabledRangeTime}
           showTime={{
@@ -63,7 +59,7 @@ const DateComponent = props => {
           }}
           format="YYYY-MM-DD HH:mm:ss"
         />
-      </div>
+      </React.Fragment>
     );
   }
   return (

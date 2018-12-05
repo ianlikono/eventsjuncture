@@ -22,6 +22,7 @@ export const ProductImage = styled.img`
   width: 100%;
   height: 100%;
   background-size: cover;
+  object-fit: contain;
 `;
 
 export const ProductTitle = styled.div`
