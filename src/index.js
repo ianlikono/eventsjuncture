@@ -1,8 +1,14 @@
+import ApolloClient from "apollo-boost";
+import Amplify from "aws-amplify";
 import React from "react";
+import { ApolloProvider } from "react-apollo";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
+import config from "./aws-exports";
 import * as serviceWorker from "./serviceWorker";
+
+Amplify.configure(config);
 
 const theme = {
   colorPrimaryDark: "#181818",
@@ -12,8 +18,7 @@ const theme = {
   paragraphColor: "#888888",
   BorderColor: "#707070",
 
-  fontSize:  '0.7rem',
-  labelSize: '2rem',
+  fontSize: "0.7rem",
 
   inputBorderColor: "#c6c6c6",
 
@@ -41,10 +46,20 @@ const theme = {
   imageGradientDark: "rgba(37, 115, 203, 0.8)"
 };
 
+const client = new ApolloClient({
+  uri:
+    "https://cdgn4r5nwfclnjuf6nutdsff2q.appsync-api.us-east-1.amazonaws.com/graphql",
+  headers: {
+    "X-Api-Key": "da2-52zqnn6b2bavjirdkeuhqdv36y"
+  }
+});
+
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>,
+  <ApolloProvider client={client}>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </ApolloProvider>,
 
   document.getElementById("root")
 );
