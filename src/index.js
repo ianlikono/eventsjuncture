@@ -50,7 +50,7 @@ const client = new ApolloClient({
   uri:
     "https://cdgn4r5nwfclnjuf6nutdsff2q.appsync-api.us-east-1.amazonaws.com/graphql",
   headers: {
-    "X-Api-Key": "da2-52zqnn6b2bavjirdkeuhqdv36y"
+    "X-Api-Key": "da2-rl7cwqgqvrhjjnmyfvgcledaii"
   }
 });
 

@@ -5,8 +5,8 @@ import Marker from "./Marker";
 
 export default class Map extends Component {
   onClick = props => {
-    const lat = 59.955413;
-    const lng = 30.337844;
+    const lat = props.latitude;
+    const lng = props.longitude;
     window.open(
       `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
     );
@@ -14,8 +14,8 @@ export default class Map extends Component {
 
   render() {
     const center = {
-      lat: 59.955413,
-      lng: 30.337844
+      lat: this.props.latitude,
+      lng: this.props.longitude
     };
 
     const zoom = 11;
@@ -31,7 +31,7 @@ export default class Map extends Component {
             onClick={() => this.onClick(this.props)}
             lat={center.lat}
             lng={center.lng}
-            text="Kreyser Avrora"
+            text={this.props.address}
           />
         </GoogleMapReact>
       </Wrapper>
