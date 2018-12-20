@@ -1,7 +1,7 @@
 {
     "AppSyncApiName": "eventsjuncture",
-    "schemaGraphql": "s3://eventsjuncture-20181130005824-deployment/amplify-appsync-files/schema.graphql.1543612203150",
+    "schemaGraphql": "s3://eventsjuncture-20181130005824-deployment/amplify-appsync-files/schema.graphql.1545342796957",
     "ResolverBucket": "eventsjuncture-20181130005824-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1543612203150"
+    "DeploymentTimestamp": "1545342796957"
 }

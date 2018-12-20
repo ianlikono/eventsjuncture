@@ -73,18 +73,19 @@ export const UserName = styled.span`
 
 export const Time = styled.span`
   color: ${props => props.theme.textColorDark};
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1;
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-style: italic;
 `;
 
 export const CommentText = styled.p`
   color: ${props => props.theme.textColorDark};
   font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 `;

@@ -44,6 +44,7 @@ export const CommentBox = styled.div`
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
+  color: ${props => props.theme.textColorLight};
 `;
 
 export const TextArea = styled.textarea`
