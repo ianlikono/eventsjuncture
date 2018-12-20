@@ -288,7 +288,8 @@ class Create extends React.Component {
                                   longitude,
                                   coverUrl,
                                   address,
-                                  startDate
+                                  startDate,
+                                  eventOwnerId: "88b52136-4cba-463a-b457-e8e22b6d52c7"
                                 }
                               }
                             });

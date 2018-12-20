@@ -1,5 +1,6 @@
 type Event @model {
   id: ID!
+  Owner: User! @connection
   title: String!
   description: String!
   address: String!
@@ -10,4 +11,22 @@ type Event @model {
   coverUrl: String!
   largeCoverUrl: String!
   tag: String!
+  comments: [Comment] @connection(name: "eventComments")
+}
+
+type User @model {
+  id: ID!
+  username: String!
+  userAvatar: String
+  email: String!
+  latitude: Float
+  longitude: Float
+}
+
+type Comment @model {
+  id: ID!
+  user: User! @connection
+  event: Event! @connection(name: "eventComments")
+  text: String!
+  createdAt: String
 }

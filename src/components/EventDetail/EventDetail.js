@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import React from "react";
 import { Query } from "react-apollo";
 import NotFound from "../../components/NotFound/NotFound";
-import { getEvent } from "../../graphql/queries";
+import { getEvent } from "../../graphql/getEvent";
 import Carousel from "./Carousel/Carousel";
 import CommentBox from "./CommentBox/CommentBox";
 import Comments from "./Comments/Comments";
@@ -38,8 +38,8 @@ export default props => {
                 description={event.description}
                 tag={event.tag}
               />
-              <CommentBox />
-              <Comments />
+              <CommentBox eventId={id} />
+              <Comments comments={event.comments} />
               <Map
                 latitude={event.latitude}
                 longitude={event.longitude}

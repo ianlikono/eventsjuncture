@@ -1,5 +1,6 @@
 type Event {
   id: ID!
+  Owner: User!
   title: String!
   description: String!
   address: String!
@@ -10,6 +11,24 @@ type Event {
   coverUrl: String!
   largeCoverUrl: String!
   tag: String!
+  comments(filter: ModelCommentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentConnection
+}
+
+type User {
+  id: ID!
+  username: String!
+  userAvatar: String
+  email: String!
+  latitude: Float
+  longitude: Float
+}
+
+type Comment {
+  id: ID!
+  user: User!
+  event: Event!
+  text: String!
+  createdAt: String
 }
 
 enum ModelSortDirection {
@@ -97,6 +116,10 @@ input ModelEventFilterInput {
 type Query {
   getEvent(id: ID!): Event
   listEvents(filter: ModelEventFilterInput, limit: Int, nextToken: String): ModelEventConnection
+  getUser(id: ID!): User
+  listUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection
+  getComment(id: ID!): Comment
+  listComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String): ModelCommentConnection
 }
 
 input CreateEventInput {
@@ -111,6 +134,7 @@ input CreateEventInput {
   coverUrl: String!
   largeCoverUrl: String!
   tag: String!
+  eventOwnerId: ID!
 }
 
 input UpdateEventInput {
@@ -125,6 +149,7 @@ input UpdateEventInput {
   coverUrl: String
   largeCoverUrl: String
   tag: String
+  eventOwnerId: ID
 }
 
 input DeleteEventInput {
@@ -135,10 +160,95 @@ type Mutation {
   createEvent(input: CreateEventInput!): Event
   updateEvent(input: UpdateEventInput!): Event
   deleteEvent(input: DeleteEventInput!): Event
+  createUser(input: CreateUserInput!): User
+  updateUser(input: UpdateUserInput!): User
+  deleteUser(input: DeleteUserInput!): User
+  createComment(input: CreateCommentInput!): Comment
+  updateComment(input: UpdateCommentInput!): Comment
+  deleteComment(input: DeleteCommentInput!): Comment
 }
 
 type Subscription {
   onCreateEvent: Event @aws_subscribe(mutations: ["createEvent"])
   onUpdateEvent: Event @aws_subscribe(mutations: ["updateEvent"])
   onDeleteEvent: Event @aws_subscribe(mutations: ["deleteEvent"])
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+  onUpdateUser: User @aws_subscribe(mutations: ["updateUser"])
+  onDeleteUser: User @aws_subscribe(mutations: ["deleteUser"])
+  onCreateComment: Comment @aws_subscribe(mutations: ["createComment"])
+  onUpdateComment: Comment @aws_subscribe(mutations: ["updateComment"])
+  onDeleteComment: Comment @aws_subscribe(mutations: ["deleteComment"])
+}
+
+type ModelUserConnection {
+  items: [User]
+  nextToken: String
+}
+
+input ModelUserFilterInput {
+  id: ModelIDFilterInput
+  username: ModelStringFilterInput
+  userAvatar: ModelStringFilterInput
+  email: ModelStringFilterInput
+  latitude: ModelFloatFilterInput
+  longitude: ModelFloatFilterInput
+  and: [ModelUserFilterInput]
+  or: [ModelUserFilterInput]
+  not: ModelUserFilterInput
+}
+
+input CreateUserInput {
+  id: ID
+  username: String!
+  userAvatar: String
+  email: String!
+  latitude: Float
+  longitude: Float
+}
+
+input UpdateUserInput {
+  id: ID!
+  username: String
+  userAvatar: String
+  email: String
+  latitude: Float
+  longitude: Float
+}
+
+input DeleteUserInput {
+  id: ID
+}
+
+type ModelCommentConnection {
+  items: [Comment]
+  nextToken: String
+}
+
+input ModelCommentFilterInput {
+  id: ModelIDFilterInput
+  text: ModelStringFilterInput
+  createdAt: ModelStringFilterInput
+  and: [ModelCommentFilterInput]
+  or: [ModelCommentFilterInput]
+  not: ModelCommentFilterInput
+}
+
+input CreateCommentInput {
+  id: ID
+  text: String!
+  createdAt: String
+  commentUserId: ID!
+  commentEventId: ID!
+}
+
+input UpdateCommentInput {
+  id: ID!
+  text: String
+  createdAt: String
+  commentUserId: ID
+  commentEventId: ID
+}
+
+input DeleteCommentInput {
+  id: ID
 }

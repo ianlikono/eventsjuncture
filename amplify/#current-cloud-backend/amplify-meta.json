@@ -25,8 +25,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/eventsjuncture-20181130005824-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apieventsjuncture"
 			},
-			"lastPushTimeStamp": "2018-11-30T21:11:10.457Z",
-			"lastPushDirHash": "4MmIawjwpVSaf3HCRnaulINWqqc="
+			"lastPushTimeStamp": "2018-12-20T21:55:26.976Z",
+			"lastPushDirHash": "Xx0WVPONPcVuCtuBqnv9qsh+0EM="
 		}
 	}
 }
